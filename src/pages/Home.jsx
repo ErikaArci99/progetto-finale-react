@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <div>
-            <h1>Benvenuto!</h1>
-            <p>Ciao utente! Esplora le nostre borse:</p>
-            <Link to="/borse">Vai alle Borse</Link>
+        <div className="container mt-5 text-center">
+            <h1 className="text-color">Benvenuto!</h1>
+            <p className="lead">Ciao utente! Esplora le nostre borse:</p>
+            <Link to="/borse" className="btn btn-outline-primary">Vai alle Borse</Link>
         </div>
     );
 }
