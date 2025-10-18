@@ -1,31 +1,18 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg shadow-sm bg-light">
+        <nav className="navbar navbar-expand-lg shadow-sm">
             <div className="container">
-                <Link className="navbar-brand fw-bold text-secondary" to="/">Borse Luxury</Link>
+                <div className="d-flex align-items-center">
+                    <Link className="nav-link text-secondary fw-bold me-5" to="/">Borse Luxury</Link>
+                    <Link className="nav-link text-color me-3" to="/borse">Borse</Link>
+                    <Link className="nav-link text-color me-3" to="/collezioni">Collezioni</Link>
+                    <Link className="nav-link text-color" to="/sconti">Sconti</Link>
+                </div>
 
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <Link className="nav-link text-color" to="/borse">Borse</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-color" to="/collezioni">Collezioni</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-color" to="/sconti">Sconti</Link>
-                        </li>
-                    </ul>
-
-                    <Link className="btn btn-outline-secondary btn-sm" to="/">Home</Link>
+                <div className="ms-auto">
+                    <a href="http://localhost:8080/login" className="btn btn-outline-secondary">Admin Login</a>
                 </div>
             </div>
         </nav>
